@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ThunderHub</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="light-grey">
+  <div  id='root' class="light-grey"></div>
+
+  <script>
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import {AppContainer} from 'react-hot-loader';
+
+  const render = () => {
+    const App = require('./app').default;
+    ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('root'));
+    console.log('Hot Reloaded!');
+  }
+  render();
+
+  if (module.hot) {
+    module.hot.accept(render);
+  }
+  </script>
+
+  <script>
+  //Open dev tools with F12
+   document.addEventListener("keydown", function (e) {
+       if (e.which === 123) {
+            require('electron').remote.getCurrentWindow().toggleDevTools();
+       } else if (e.which === 116) {
+            location.reload();
+       }
+   });
+ </script>
+</body>
+</html>
