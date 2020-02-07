@@ -7,8 +7,6 @@ import HomePage from './home';
 import EmailPage from './email';
 import CalendarPage from './calendar';
 import ClassPage from './classpage';
-import SpotifyPage from './spotify';
-import NotepadPage from './notepad';
 
 export default class CurrentPage extends React.Component {
 
@@ -20,23 +18,18 @@ export default class CurrentPage extends React.Component {
 
     // Select current page
     const cp = this.props.page;
-	console.log(cp);
+
     if (cp === 0) {
       curPage = <HomePage />;
     } else if (cp === 1) {
       curPage = <EmailPage />;
     } else if (cp === 2) {
       curPage = <CalendarPage />;
-    } else if (cp === 3) {
-      curPage = <SpotifyPage />;
-    } else if (cp === 4) {
-      curPage = <NotepadPage />;
-    }
-	else if (cp > 6) {
+    } else if (cp > 3) {
       curPage = (<ClassPage
-        name={sub[cp - 7].name}
-        icon={sub[cp - 7].icon}
-        links={sub[cp - 7].links}
+        name={sub[cp - 4].name}
+        icon={sub[cp - 4].icon}
+        links={sub[cp - 4].links}
       />);
     } else {
       curPage = <HomePage />;

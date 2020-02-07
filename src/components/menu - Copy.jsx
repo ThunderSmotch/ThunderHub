@@ -16,13 +16,13 @@ const styleMenu = css`
   z-index:1;
   overflow:auto;
   position: fixed;
-  /*background-color: #EAFDED; */
-  background-color:  #2a3f60;
+  /*background-color: #2a3f60; */
+  background-color:  #EAFDED;
 `;
 
 const styleMenuTitle = css`
   width: 100%;
-  color: white;
+  color: black;
   /* color: white; */
   text-align: center;
   height: 80px;
@@ -30,8 +30,8 @@ const styleMenuTitle = css`
   font-size: 30px;
   -webkit-app-region: dr;
   z-index:2;
-  /*background-color: #EAFDED; */
-  background-color:  #2a3f60;
+  /*background-color: #2a3f60; */
+  background-color:  #EAFDED;
   position: sticky!important;
   top: 0px;
 `;
@@ -75,27 +75,10 @@ export default class Menu extends React.Component {
       id={btnid++}
       key={id++}
     />);
-	
-	menuitems.push(<MenuButton
-      page={this.props.page}
-      onClick={this.props.onClick}
-      icon="img/menu/spotify.png"
-      name="Spotify"
-      id={btnid++}
-      key={id++}
-    />);
-	
-	menuitems.push(<MenuButton
-      page={this.props.page}
-      onClick={this.props.onClick}
-      icon="img/menu/notes.png"
-      name="Writing"
-      id={btnid++}
-      key={id++}
-    />);
-	
+
     menuitems.push(<hr key={id++} />);
-	// Get the categories from data
+
+    // Get the categories from data
     let catid = 0;
     categories.forEach((category) => {
       menuitems.push(<MenuCategory
@@ -107,7 +90,7 @@ export default class Menu extends React.Component {
       />,
       );
     });
-	
+
     return menuitems;
   }
 

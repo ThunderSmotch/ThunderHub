@@ -33,12 +33,13 @@ const styleMenuButtonIcon = css`
   padding-top: 4px;
   vertical-align: middle;
   float: left;
-  filter: invert(100%);
+   filter: invert(100%); 
 `;
 
 const styleMenuButtonText = css`
   margin-left: 32px;
   color: white;
+  /* color: white; */
   height: 100%;
   text-align: left;
   line-height: 15px;

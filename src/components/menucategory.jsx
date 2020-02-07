@@ -16,7 +16,8 @@ const styleMenuCategory = css`
   outline:0;
   height: 40px;
   line-height: 40px;
-  background-color: #0a2044!important;
+  /* background-color: #0a2044!important; OG*/
+  background-color:  #BBCABD!important;
   &:hover {
     background-color: #535577!important;
     cursor: pointer;
@@ -25,7 +26,8 @@ const styleMenuCategory = css`
 
 const styleMenuCategoryText = css`
   margin-left: 32px;
-  color: white;
+  color: black;
+  /* color: white; */
   height: 100%;
   display: flex;
   align-items: center;
